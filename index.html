@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>For Dhun ❤️</title>
+    <title>For Pallabi ❤️</title>
 
     <style>
         * {
@@ -20,72 +20,64 @@
             align-items: center;
             text-align: center;
             font-family: Arial, sans-serif;
-
             background: linear-gradient(135deg, #ff758c, #ff7eb3);
-
+            color: white;
             overflow: hidden;
         }
 
         .box {
             width: 90%;
-            max-width: 550px;
-            padding: 40px 25px;
-
-            background: rgba(255, 255, 255, 0.18);
+            max-width: 600px;
+            padding: 35px 25px;
+            background: rgba(255,255,255,0.18);
             border-radius: 30px;
-
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
-
-            color: white;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            backdrop-filter: blur(8px);
         }
 
         .heart {
-            font-size: 80px;
-
+            font-size: 75px;
             animation: heartbeat 1.2s infinite;
         }
 
         @keyframes heartbeat {
-            0% {
+            0%, 100% {
                 transform: scale(1);
             }
 
             50% {
-                transform: scale(1.2);
-            }
-
-            100% {
-                transform: scale(1);
+                transform: scale(1.18);
             }
         }
 
         h1 {
-            font-size: 42px;
+            font-size: 38px;
             margin: 15px 0;
         }
 
         p {
-            font-size: 24px;
-            line-height: 1.5;
+            font-size: 21px;
+            line-height: 1.6;
+        }
+
+        .highlight {
+            font-size: 25px;
+            font-weight: bold;
         }
 
         button {
             border: none;
-            padding: 15px 30px;
-            margin: 10px;
-
+            padding: 14px 28px;
+            margin: 8px;
             border-radius: 30px;
-
-            font-size: 20px;
+            font-size: 19px;
             font-weight: bold;
-
             cursor: pointer;
-
             transition: 0.3s;
         }
 
         button:hover {
-            transform: scale(1.1);
+            transform: scale(1.08);
         }
 
         .yes {
@@ -98,24 +90,19 @@
             color: #ff1744;
         }
 
-        .hidden {
-            display: none;
-        }
-
-        .small {
-            font-size: 20px;
-        }
-
-        .back {
+        .again {
             background: white;
             color: #ff4081;
+        }
+
+        .hidden {
+            display: none;
         }
 
         .floating-heart {
             position: fixed;
             bottom: -50px;
             font-size: 25px;
-
             animation: floatUp 5s linear forwards;
         }
 
@@ -130,6 +117,12 @@
                 opacity: 0;
             }
         }
+
+        .signature {
+            margin-top: 25px;
+            font-size: 18px;
+            opacity: 0.9;
+        }
     </style>
 </head>
 
@@ -137,20 +130,45 @@
 
     <div class="box">
 
-        <!-- FIRST MESSAGE -->
+        <!-- MAIN PAGE -->
 
         <div id="question">
 
             <div class="heart">❤️</div>
 
-            <h1>Hey Dhun 😊</h1>
+            <h1>Hey Pallabi...</h1>
 
-            <p>
-                I miss you 🥺
+            <p class="highlight">
+                My Dhun 🥺❤️
             </p>
 
             <p>
-                <b>Do you miss me too?</b> ❤️
+                I know you're upset with me since yesterday.
+            </p>
+
+            <p>
+                And honestly, I don't like knowing that you're upset,
+                especially when I know I might be the reason behind
+                that little sadness.
+            </p>
+
+            <p>
+                I may not always say the right thing,
+                but I really do care about you.
+            </p>
+
+            <p>
+                I miss our conversations.<br>
+                I miss your smile.<br>
+                And yes... I miss <b>you</b>. 🥺❤️
+            </p>
+
+            <p>
+                So I have just one little question...
+            </p>
+
+            <p class="highlight">
+                Do you miss me too? 🥺
             </p>
 
             <button class="yes" onclick="yesAnswer()">
@@ -161,59 +179,83 @@
                 NO 😜
             </button>
 
+            <div class="signature">
+                From someone who is missing his Dhun ❤️
+            </div>
+
         </div>
 
 
-        <!-- YES MESSAGE -->
+        <!-- YES PAGE -->
 
         <div id="yesMessage" class="hidden">
 
             <div class="heart">🥰❤️</div>
 
-            <h1>Yayyyy! 😍</h1>
+            <h1>Really?! ❤️</h1>
 
             <p>
-                I knew you would say YES! ❤️
+                Okay... now you just made me smile. 🥺
             </p>
 
             <p>
-                Now my heart is smiling again 🥺💕
+                I was hoping you'd say that.
             </p>
 
             <p>
-                <b>Now you smile too 😊</b>
+                Pallabi, I don't want you to stay upset.
+                If I hurt you, I'm genuinely sorry. ❤️
             </p>
 
-            <button class="back" onclick="restart()">
-                Again? 😜
+            <p>
+                I don't need a big reply from you.
+                Just seeing you smile would be enough for me. 😊
+            </p>
+
+            <p class="highlight">
+                I LOVE YOU ❤️<br>
+                & MISS YOU SO MUCH 🥺
+            </p>
+
+            <button class="again" onclick="restart()">
+                Read it again 😌
             </button>
 
         </div>
 
 
-        <!-- NO MESSAGE -->
+        <!-- NO PAGE -->
 
         <div id="noMessage" class="hidden">
 
-            <div class="heart">😂❤️</div>
+            <div class="heart">🥺❤️</div>
 
-            <h1>Ohhh... NO? 😜</h1>
+            <h1>Ohhh... okay 😭</h1>
 
             <p>
-                Okay, I'll pretend<br>
-                I didn't see that! 🙈
+                I respect your answer. 😌
             </p>
 
             <p>
-                But I still miss you ❤️🥺
+                But I'm still going to leave this little message here...
+            </p>
+
+            <p class="highlight">
+                I MISS YOU, PALLABI ❤️
             </p>
 
             <p>
-                <b>Now smile a little 😊</b>
+                And whenever you're ready,
+                I hope we can talk and smile again. 😊
             </p>
 
-            <button class="back" onclick="restart()">
-                Try Again 😜
+            <p>
+                No pressure.<br>
+                Just one little ❤️ from me to you.
+            </p>
+
+            <button class="again" onclick="restart()">
+                One more time? 😜
             </button>
 
         </div>
@@ -225,9 +267,11 @@
 
         function yesAnswer() {
 
-            document.getElementById("question").classList.add("hidden");
+            document.getElementById("question")
+                .classList.add("hidden");
 
-            document.getElementById("yesMessage").classList.remove("hidden");
+            document.getElementById("yesMessage")
+                .classList.remove("hidden");
 
             createHearts();
         }
@@ -235,9 +279,11 @@
 
         function noAnswer() {
 
-            document.getElementById("question").classList.add("hidden");
+            document.getElementById("question")
+                .classList.add("hidden");
 
-            document.getElementById("noMessage").classList.remove("hidden");
+            document.getElementById("noMessage")
+                .classList.remove("hidden");
 
             createHearts();
         }
@@ -245,25 +291,30 @@
 
         function restart() {
 
-            document.getElementById("yesMessage").classList.add("hidden");
+            document.getElementById("yesMessage")
+                .classList.add("hidden");
 
-            document.getElementById("noMessage").classList.add("hidden");
+            document.getElementById("noMessage")
+                .classList.add("hidden");
 
-            document.getElementById("question").classList.remove("hidden");
+            document.getElementById("question")
+                .classList.remove("hidden");
         }
 
 
         function createHearts() {
 
-            for (let i = 0; i < 15; i++) {
+            for (let i = 0; i < 20; i++) {
 
                 let heart = document.createElement("div");
 
                 heart.className = "floating-heart";
 
-                heart.innerHTML = "❤️";
+                heart.innerHTML =
+                    Math.random() > 0.5 ? "❤️" : "💕";
 
-                heart.style.left = Math.random() * 100 + "vw";
+                heart.style.left =
+                    Math.random() * 100 + "vw";
 
                 heart.style.animationDuration =
                     (3 + Math.random() * 3) + "s";
